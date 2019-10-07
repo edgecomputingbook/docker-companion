@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /opt/edgebook/dev/mydata
-cd /opt/edgebook/dev/mydata/filerepo
+cd /opt/edgecomputingbook/dev/mydata
+cd /opt/edgecomputingbook/dev/mydata/filerepo
 mvn clean package bundle:bundle
