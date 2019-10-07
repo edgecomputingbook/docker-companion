@@ -27,10 +27,6 @@ RUN mkdir -p /opt/edgecomputingbook/ \
   && curl -fsSL -o /opt/edgecomputingbook/dev/build-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/build-plugin.sh \
   && curl -fsSL -o /opt/edgecomputingbook/dev/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/clone-plugin.sh
 
-#COPY bin/agent-1.0-SNAPSHOT.jar /opt/edgebook/bin/agent-1.0-SNAPSHOT.jar
-#COPY dev/clone-plugin.sh /opt/edgebook/dev/clone-plugin.sh
-#COPY dev/build-plugin.sh /opt/edgebook/dev/build-plugin.sh
-
 WORKDIR /opt/edgecomputingbook
 
 
