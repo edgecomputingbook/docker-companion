@@ -18,14 +18,18 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 ENV MAVEN_HOME /usr/share/maven
-ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
+#ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
+ENV MAVEN_CONFIG /opt/edgecomputingbook/dev/mydata/.m2
+ENV M2_HOME /opt/edgecomputingbook/dev/mydata/.m2
 
 RUN mkdir -p /opt/edgecomputingbook/ \
   && mkdir -p /opt/edgecomputingbook/bin \
   && mkdir -p /opt/edgecomputingbook/dev \ 
+  && mkdir -p /opt/edgecomputingbook/dev/mydata \
   && curl -fsSL -o /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar https://github.com/CrescoEdge/agent/releases/download/1.0-SNAPSHOT/agent-1.0-SNAPSHOT.jar \
   && curl -fsSL -o /opt/edgecomputingbook/dev/build-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/build-plugin.sh \
-  && curl -fsSL -o /opt/edgecomputingbook/dev/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/clone-plugin.sh
+  && curl -fsSL -o /opt/edgecomputingbook/dev/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/clone-plugin.sh \
+  && chmod +x /opt/edgecomputingbook/dev/*.sh
 
 WORKDIR /opt/edgecomputingbook
 
