@@ -15,12 +15,11 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c - \
   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
   && rm -f /tmp/apache-maven.tar.gz \
-  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-
+  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn \
+  && curl -fsSL -o /usr/share/maven/conf/settings.xml https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/misc/maven-settings.xml
+  
 ENV MAVEN_HOME /usr/share/maven
-#ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
-ENV MAVEN_CONFIG /opt/edgecomputingbook/dev/mydata/.m2
-ENV M2_HOME /opt/edgecomputingbook/dev/mydata/.m2
+ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 RUN mkdir -p /opt/edgecomputingbook/ \
   && mkdir -p /opt/edgecomputingbook/bin \
