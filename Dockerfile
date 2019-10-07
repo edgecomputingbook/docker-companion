@@ -23,8 +23,9 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 RUN mkdir -p /opt/edgecomputingbook/ \
   && mkdir -p /opt/edgecomputingbook/bin \
   && mkdir -p /opt/edgecomputingbook/dev \ 
-  && curl -fsSL -o /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar https://github.com/CrescoEdge/agent/releases/download/1.0-SNAPSHOT/agent-1.0-SNAPSHOT.jar
-
+  && curl -fsSL -o /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar https://github.com/CrescoEdge/agent/releases/download/1.0-SNAPSHOT/agent-1.0-SNAPSHOT.jar \
+  && curl -fsSL -o /opt/edgecomputingbook/dev/build-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/build-plugin.sh \
+  && curl -fsSL -o /opt/edgecomputingbook/dev/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/clone-plugin.sh
 
 #COPY bin/agent-1.0-SNAPSHOT.jar /opt/edgebook/bin/agent-1.0-SNAPSHOT.jar
 #COPY dev/clone-plugin.sh /opt/edgebook/dev/clone-plugin.sh
