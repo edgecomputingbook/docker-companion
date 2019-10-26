@@ -25,10 +25,11 @@ RUN mkdir -p /opt/edgecomputingbook/ \
   && mkdir -p /opt/edgecomputingbook/bin \
   && mkdir -p /opt/edgecomputingbook/dev \ 
   && mkdir -p /opt/edgecomputingbook/dev/mydata \
+  && mkdir -p /opt/edgecomputingbook/dev/mydata/ch2 \
   && curl -fsSL -o /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar https://github.com/CrescoEdge/agent/releases/download/1.0-SNAPSHOT/agent-1.0-SNAPSHOT.jar \
-  && curl -fsSL -o /opt/edgecomputingbook/dev/build-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/build-plugin.sh \
-  && curl -fsSL -o /opt/edgecomputingbook/dev/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/clone-plugin.sh \
-  && chmod +x /opt/edgecomputingbook/dev/*.sh
+  && curl -fsSL -o /opt/edgecomputingbook/dev/ch2/build-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/ch2/build-plugin.sh \
+  && curl -fsSL -o /opt/edgecomputingbook/dev/ch2/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/dev/ch2/clone-plugin.sh \
+  && chmod +x /opt/edgecomputingbook/dev/ch2/*.sh
 
 WORKDIR /opt/edgecomputingbook
 
