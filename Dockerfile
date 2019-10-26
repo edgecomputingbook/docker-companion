@@ -26,9 +26,8 @@ RUN mkdir -p /opt/edgecomputingbook/ \
   && curl -fsSL -o /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar https://github.com/CrescoEdge/agent/releases/download/1.0-SNAPSHOT/agent-1.0-SNAPSHOT.jar 
 
 RUN mkdir -p /opt/edgecomputingbook/demo/mydata/ch2 \
-  && curl -fsSL -o /opt/edgecomputingbook/demo/ch2/2.2/launch_agent.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/demo/ch2/2.2/launch_agent.sh \
-  && curl -fsSL -o /opt/edgecomputingbook/demo/ch2/2.4/get-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/demo/ch2/2.4/get-plugin.sh \
-  && ls -la
+  && curl -fsSL -o /opt/edgecomputingbook/demo/ch2/2.2/launch-agent.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/demo/ch2/2.2/launch-agent.sh \
+  && curl -fsSL -o /opt/edgecomputingbook/demo/ch2/2.4/get-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/demo/ch2/2.4/get-plugin.sh 
 
 
 WORKDIR /opt/edgecomputingbook
