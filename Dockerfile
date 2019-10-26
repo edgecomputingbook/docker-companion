@@ -23,7 +23,8 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 RUN mkdir -p /opt/edgecomputingbook/ \
   && mkdir -p /opt/edgecomputingbook/bin \
-  && mkdir -p /opt/edgecomputingbook/dev \ 
+  && mkdir -p /opt/edgecomputingbook/dev \
+  && mkdir -p /opt/edgecomputingbook/dev/ch2 \ 
   && mkdir -p /opt/edgecomputingbook/dev/mydata \
   && mkdir -p /opt/edgecomputingbook/dev/mydata/ch2 \
   && curl -fsSL -o /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar https://github.com/CrescoEdge/agent/releases/download/1.0-SNAPSHOT/agent-1.0-SNAPSHOT.jar \
