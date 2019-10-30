@@ -35,7 +35,6 @@ RUN mkdir -p /opt/edgecomputingbook/demo/mydata/ch2 \
   && curl -fsSL -o /opt/edgecomputingbook/demo/ch2/2.7/clone-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/demo/ch2/2.7/clone-plugin.sh \ 
   && curl -fsSL -o /opt/edgecomputingbook/demo/ch2/2.9/build-plugin.sh https://raw.githubusercontent.com/edgecomputingbook/docker-companion/master/demo/ch2/2.9/build-plugin.sh
 
-
 RUN find /opt/edgecomputingbook/demo -name "*.sh" -exec chmod +x {} \;
 
 WORKDIR /opt/edgecomputingbook
