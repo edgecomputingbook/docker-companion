@@ -1,0 +1,8 @@
+#!/bin/bash
+export CRESCO_regionname=Manning
+export CRESCO_agentname=Terminal01
+export CRESCO_discovery_secret_agent=manning_discovery_secret
+export CRESCO_discovery_secret_region=warehouse_discovery_secret
+export CRESCO_discovery_secret_global=your-company_discovery_secret
+export CRESCO_is_global=true
+java -jar /opt/edgecomputingbook/bin/agent-1.0-SNAPSHOT.jar
