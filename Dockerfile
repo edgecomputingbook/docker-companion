@@ -24,6 +24,9 @@ RUN mkdir -p /opt/edgecomputingbook/demo/mydata/ch2 \
 #RUN mkdir -p /opt/edgecomputingbook/demo/ch3
 ADD ./demo/ch3/ /opt/edgecomputingbook/demo/ch3/
 
+#RUN mkdir -p /opt/edgecomputingbook/demo/ch4
+ADD ./demo/ch4/ /opt/edgecomputingbook/demo/ch4/
+
 RUN find /opt/edgecomputingbook/demo -name "*.sh" -exec chmod +x {} \;
 
 EXPOSE 32005
