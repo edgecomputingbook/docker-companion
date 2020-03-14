@@ -28,8 +28,10 @@ docker pull edgecomputingbook/companion
 
 The easiest way to run the companion Docker image is to run the following:
 ```
-docker run --rm -it edgecomputingbook/companion
+docker run --rm -it [-p 8181:8181] edgecomputingbook/companion
 ```
+
+The `-p 8181:8181` is required if you want to interact with the edge computing testbed's web-based administration dashboard.
 
 ---
 
